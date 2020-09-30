@@ -1,5 +1,13 @@
-.class text {
-  font-size: larger;
-  color: red;
-  fill: red;
+.bar-container {
+  display: flex;
+}
+
+.bar {
+  flex: 50%;
+  margin-right: 10px;
+}
+
+img {
+  height: 500px;
+  min-width: 300px;
 }

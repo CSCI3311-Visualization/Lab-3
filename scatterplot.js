@@ -8,7 +8,6 @@ d3.csv('cities.csv', (d) => {
   };
 }).then((data) => {
   data = data.filter((d) => d.eu == true);
-  console.log('cities', data);
 
   d3.select('.city-count').text('Number of Cities: ' + data.length);
 
@@ -35,7 +34,7 @@ d3.csv('cities.csv', (d) => {
       if (d.population < 1000000) return 4;
       else return 8;
     })
-    .attr('fill', 'skyblue');
+    .attr('fill', '#4795EC');
 
   svg
     .selectAll('text')
@@ -50,6 +49,4 @@ d3.csv('cities.csv', (d) => {
     .attr('font-size', 11)
     .attr('text-anchor', 'middle')
     .attr('dy', -10);
-
-  console.log('HELLO');
 });

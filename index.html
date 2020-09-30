@@ -3,20 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <script defer src="https://d3js.org/d3.v6.min.js"></script>
-    <script defer src="main.js"></script>
+    <script defer src="node_modules/d3-tip/index.js"></script>
+    <script defer src="scatterplot.js"></script>
     <script defer src="barchart.js"></script>
 
     <title>Lab 3: SVG & D3</title>
   </head>
   <body>
     <div class="container">
-      <h2>World's Tallest Buildings</h2>
-      <div class="barchart"></div>
       <h2>Population in European countries</h2>
       <div class="city-count"></div>
       <div class="population-plot"></div>
+      <h2>World's Tallest Buildings</h2>
+      <div class="bar-container">
+        <div class="barchart bar"></div>
+        <div class="row bar">
+          <div class="column">
+            <img class="image" alt="building-image" />
+          </div>
+          <div class="column">
+            <h4 class="building"></h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Height</td>
+                  <td><span class="height"></span></td>
+                </tr>
+                <tr>
+                  <td>City</td>
+                  <td><span class="city"></span></td>
+                </tr>
+                <tr>
+                  <td>Country</td>
+                  <td><span class="country"></span></td>
+                </tr>
+                <tr>
+                  <td>Floors</td>
+                  <td><span class="floors"></span></td>
+                </tr>
+                <tr>
+                  <td>Completed</td>
+                  <td><span class="completed"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
